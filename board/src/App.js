@@ -16,16 +16,17 @@ const App = () => {
 
   const handleClaim = (data) => {
     setClaimedPoints(data.message);
-    setRefreshFlag(!refreshFlag); // refresh leaderboard
+    setRefreshFlag(!refreshFlag); 
   };
 
   const handleUserSelect = (userId) => {
     setSelectedUser(userId);
-    setClaimedPoints(null); // reset points message
+    setClaimedPoints(null); 
   };
 
   return (
-    <div className="bg-[#f5f3f3] min-h-screen">
+    <div>
+<div className="bg-[#f5f3f3] min-h-screen">
       <Navbar/>
       
 
@@ -37,12 +38,30 @@ const App = () => {
 
       <ClaimButton selectedUser={selectedUser} onClaim={handleClaim} />
 
-      {claimedPoints && <p style={{ fontWeight: "bold" }}>{claimedPoints}</p>}
+      {claimedPoints && (
+  <p
+    style={{
+      marginLeft: '20px',
+      backgroundColor: '#e9e7e7eb',
+      padding: '5px',
+      marginTop: '10px',
+      borderRadius: '5px',
+      height:'40px',  
+      width: '260px',
+      textAlign: 'center'        
+    }}
+  >
+    {claimedPoints}
+  </p>
+)}
+
 
       <Leaderboard refresh={refreshFlag} />
 {/* 
       {selectedUser && <ClaimHistory selectedUser={selectedUser} />} */}
     </div>
+    </div>
+    
   );
 };
 
