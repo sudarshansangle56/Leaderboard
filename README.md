@@ -7,8 +7,10 @@ A full-stack web application that displays a dynamic leaderboard of users based 
 ---
 
 ## 📸 Preview
+## 📸 Preview
 
-![Leaderboard Screenshot](./borad/public/ll.jpg)
+![Leaderboard Screenshot](https://raw.githubusercontent.com/sudarshansangle56/Leaderboard/main/board/public/ll.png)
+
 
 
 ---
