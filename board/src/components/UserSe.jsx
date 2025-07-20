@@ -24,7 +24,7 @@ const UserSe = ({ selectedUser, setSelectedUser, refreshUsers }) => {
 
   return (
     <div className=" flex items-center m-3  justify-center">
-        <div className="bg-white h-[50px] min-w-[30%] border-[1px] border-[#7373734f]  px-5 rounded-lg m-3 flex items-center justify-center gap-5" >
+        <div className="bg-white h-[50px] sm:min-w-[30%] w-[90%] border-[1px] border-[#7373734f]  px-5 rounded-lg m-3 flex items-center justify-center gap-5" >
         <select className="text-[14px]" onChange={(e) => setSelectedUser(e.target.value)} value={selectedUser}>
         <option value="">Select User</option>
         {users.map((user) => (
