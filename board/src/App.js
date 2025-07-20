@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import UserSelector from "./components/UserSe";
 import ClaimButton from "./components/ClaimB";
 import Leaderboard from "./components/Leader";
-import ClaimHistory from "./components/ClaimHis";
 import Navbar from "./components/Navbar";
 
 const App = () => {
