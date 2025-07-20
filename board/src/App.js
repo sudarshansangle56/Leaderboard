@@ -6,8 +6,7 @@ import Leaderboard from "./components/Leader";
 import Navbar from "./components/Navbar";
 
 const App = () => {
-  const [selectedUser, setSelectedUser] = useState("");
-  const [selectedUserName, setSelectedUserName] = useState("");
+  const [selectedUser, setSelectedUser] = useState("");;
   const [claimedPoints, setClaimedPoints] = useState(null);
   const [refreshFlag, setRefreshFlag] = useState(false);
   const [refreshUsers, setRefreshUsers] = useState(false);
@@ -53,8 +52,7 @@ const App = () => {
         )}
 
         <Leaderboard refresh={refreshFlag} />
-        {/* 
-      {selectedUser && <ClaimHistory selectedUser={selectedUser} />} */}
+       
       </div>
     </div>
   );
