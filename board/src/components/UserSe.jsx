@@ -23,8 +23,8 @@ const UserSe = ({ selectedUser, setSelectedUser, refreshUsers }) => {
   };
 
   return (
-    <div className=" flex items-center m-3  justify-center">
-        <div className="bg-white h-[50px] sm:w-[30%]  w-[100%] border-[1px] border-[#7373734f]  px-5 p-2 rounded-lg m-3 flex items-center justify-center gap-5" >
+    <div className=" flex items-center   w-screen overflow-hidden justify-center">
+        <div className="bg-white h-[50px] sm:max-w-[40%]  w-[100%] border-[1px] border-[#7373734f]  px-5 p-2 rounded-lg m-3 flex items-center justify-center sm:gap-5 gap-2" >
         <select className="text-[14px]" onChange={(e) => setSelectedUser(e.target.value)} value={selectedUser}>
         <option value="">Select User</option>
         {users.map((user) => (
