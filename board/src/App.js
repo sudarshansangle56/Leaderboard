@@ -1,5 +1,4 @@
-
-import './App.css';
+import "./App.css";
 import React, { useState } from "react";
 import UserSelector from "./components/UserSe";
 import ClaimButton from "./components/ClaimB";
@@ -15,52 +14,49 @@ const App = () => {
 
   const handleClaim = (data) => {
     setClaimedPoints(data.message);
-    setRefreshFlag(!refreshFlag); 
+    setRefreshFlag(!refreshFlag);
   };
 
   const handleUserSelect = (userId) => {
     setSelectedUser(userId);
-    setClaimedPoints(null); 
+    setClaimedPoints(null);
   };
 
   return (
     <div>
-<div className="bg-[#f5f3f3] min-h-screen">
-      <Navbar/>
-      
+      <div className="bg-[#f5f3f3] min-h-screen">
+        <Navbar />
+        <p className="text-center text-red-700 font-semibold">*Database was not hosted*</p>
+        <UserSelector
+          selectedUser={selectedUser}
+          setSelectedUser={handleUserSelect}
+          refreshUsers={refreshUsers}
+        />
 
-      <UserSelector
-        selectedUser={selectedUser}
-        setSelectedUser={handleUserSelect}
-        refreshUsers={refreshUsers}
-      />
+        <ClaimButton selectedUser={selectedUser} onClaim={handleClaim} />
 
-      <ClaimButton selectedUser={selectedUser} onClaim={handleClaim} />
+        {claimedPoints && (
+          <p
+            style={{
+              marginLeft: "20px",
+              backgroundColor: "#e9e7e7eb",
+              padding: "5px",
+              marginTop: "10px",
+              borderRadius: "5px",
+              height: "40px",
+              width: "260px",
+              textAlign: "center",
+            }}
+          >
+            {claimedPoints}
+          </p>
+        )}
 
-      {claimedPoints && (
-  <p
-    style={{
-      marginLeft: '20px',
-      backgroundColor: '#e9e7e7eb',
-      padding: '5px',
-      marginTop: '10px',
-      borderRadius: '5px',
-      height:'40px',  
-      width: '260px',
-      textAlign: 'center'        
-    }}
-  >
-    {claimedPoints}
-  </p>
-)}
-
-
-      <Leaderboard refresh={refreshFlag} />
-{/* 
+        <Leaderboard refresh={refreshFlag} />
+        {/* 
       {selectedUser && <ClaimHistory selectedUser={selectedUser} />} */}
+      </div>
     </div>
-    </div>
-    
   );
 };
 

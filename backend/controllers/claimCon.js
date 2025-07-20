@@ -15,7 +15,7 @@ exports.claimPoints = async (req, res) => {
   await history.save();
 
   res.json({
-    message: `User ${user.name} claimed ${randomPoints} points!`,
+    message: ` ${user.name} claimed ${randomPoints} points!`,
     totalPoints: user.totalPoints,
   });
 };
