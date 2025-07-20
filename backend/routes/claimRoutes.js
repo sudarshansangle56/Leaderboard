@@ -9,4 +9,4 @@ router.post("/:userId", claimPoints);
 router.get("/history/:userId", getUserHistory);
 
 module.exports = router;
-//done all run now iok
+//done all run now ok
